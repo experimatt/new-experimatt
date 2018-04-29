@@ -1,27 +1,26 @@
 import React, { Component } from 'react';
-import logo from '../images/logo.svg';
+import matt from '../images/matt-decuir-headshot-small.jpg';
+import { Button } from '@blueprintjs/core';
 import '../styles/App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav className="pt-navbar pt-dark">
-          <div className="pt-navbar-group pt-align-left">
-            <div className="pt-navbar-heading">Experimatt</div>
+        <section id="header">
+          <div className="menu-button">
+            <Button className="pt-dark pt-large" icon="menu" />
           </div>
-          <div className="pt-navbar-group pt-align-right">
-            <button className="pt-button pt-minimal pt-icon-menu"></button>
+          <div className="hello flex-container">
+            <img src={matt} alt="Matt Decuir headshot"/><br />
+            <h1>Hi, I&#39;m Matt</h1>
           </div>
-        </nav>
-
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        </section>
+        <section id="about">
+          <div className="flex-container">
+            <h1>I&#39;m a software engineer, bicyclist, and pizza enthusiast</h1>
+          </div>
+        </section>
       </div>
     );
   }
